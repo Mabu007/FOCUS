@@ -1,0 +1,42 @@
+.brain-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  color: #000;
+  height: 100%;
+}
+
+.brain-section.new-concept button {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.brain-section.new-concept .icon {
+  margin-right: 0.5rem;
+}
+
+.brain-section.concepts-title {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #888;
+}
+
+.concept-list {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.concept-item {
+  padding: 0.3rem 0.5rem;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}

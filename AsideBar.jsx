@@ -15,7 +15,6 @@ function AsideBar({ activePanel, togglePanel }) {
       <button onClick={() => handleClick("chatbot")}>💬</button>
       <button onClick={() => handleClick("brain")}>🧠</button>
       <button onClick={() => handleClick("planning")}>📅</button>
-      <button onClick={() => handleClick("organizing")}>📂</button>
       <button onClick={() => handleClick("leading")}>⭐</button>
       <button onClick={() => handleClick("controlling")}>📊</button>
     </aside>
