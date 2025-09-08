@@ -1,0 +1,133 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #242424;
+  color: #fff;
+}
+
+/* App container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  height: 25px;
+  background-color: #1f1f1f;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.header h1 { font-size: 1rem; margin: 0; }
+.header button { background: none; border: none; color: inherit; cursor: pointer; font-size: 1rem; margin-left: 0.5rem; }
+
+/* Footer */
+.footer {
+  position: relative;       /* part of main area flow */
+  padding: 0.5rem 0;
+  text-align: center;
+  background-color: #ffffff; /* solid white */
+  color: #000000;            /* black text */
+  font-size: 0.9rem;
+  flex-shrink: 0;            /* ensure it doesn't shrink */
+  margin-top: auto;           /* pushes footer to bottom of main area */
+  border-top: 1px solid #ccc; /* optional separation line */
+}
+
+/* App Body */
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Aside Bar */
+.aside-bar {
+  width: 60px;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.aside-bar button {
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside-bar button:hover {
+  background: #3a3a3a;
+  color: #646cff;
+}
+
+/* Main + Panel Wrapper */
+.main-panel-wrapper {
+  display: flex;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+/* Aside Panel */
+.aside-panel {
+  width: 280px;
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 1rem;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.aside-panel.open {
+  transform: translateX(0);
+}
+
+/* Main area */
+.main-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;  /* chat window + input + footer layout */
+  background-color: #fff;
+  color: #000;
+  padding: 1rem;
+  overflow: hidden;        /* chat window scrolls */
+}
+
+/* Shrink main when panel is open */
+.main-panel-wrapper.panel-open .main-area {
+  flex: 1 0 calc(100% - 280px);
+}
+
+.chat-window {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

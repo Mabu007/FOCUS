@@ -1,0 +1,62 @@
+.chatbot-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 12px;
+  height: 100%;
+  background: transparent; /* transparent like floating panel */
+}
+
+/* Sections like New Chat / Research Mode */
+.chatbot-section {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.new-chat {
+  color: black;              /* black text */
+  background: transparent;    /* no background */
+}
+.research-mode {
+  color: black;
+  background: transparent;
+}
+
+.chatbot-section .icon {
+  margin-right: 8px;
+}
+
+/* Chats title */
+.chats-title {
+  font-weight: bold;
+  color: grey;
+  cursor: default;  /* unclickable */
+  margin-top: 12px;
+}
+
+/* Chat list */
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  flex: 1; /* fill remaining space */
+}
+
+/* Individual chat item */
+.chat-item {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #e0e0e0; /* grey chat bubble */
+  color: black;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-item:hover {
+  background-color: #d0d0d0;
+}
